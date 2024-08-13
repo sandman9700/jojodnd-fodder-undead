@@ -1,3 +1,4 @@
+var reset = "";
 var Damage = "";
 $('#DMG').change(function () {
     Damage = $('#DMG').val();
@@ -106,7 +107,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     $('#Export').click(function () {
-        var final = "<table id='tableCapture'><thead><tr><th colspan='5'>Name: " + Name + "</th><th>Hit Die: " + HitDie + "</th></tr></thead><tbody><tr><td colspan='2'>Specialization: " + spec + "</td><td>HP: " + HP + "</td><td>AC: " + AC + "</td><td>HAC: " + HAC + "</td><td>PB: " + PRB + "</td></tr><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr><tr><td>" + Str + "</td><td>" + Dex + "</td><td>" + Con + "</td><td>" + Int + "</td><td>" + Wis + "</td><td>" + Cha + "</td></tr><tr><td colspan='3'>Damage: " + Damage + "</td><td colspan='3'>Misc: " + Misc + "</td></tr></tbody></table>"
+        var final = "<table id='tableCapture'><thead><tr><th colspan='5'>Name: " + Name + "</th><th>Hit Die: " + HitDie + "</th></tr></thead><tbody><tr><td colspan='2'>Specialization: " + spec + "</td><td>HP: " + HP + "</td><td>AC: " + AC + "</td><td>HAC: " + HAC + "</td><td>PB: " + PRB + "</td></tr><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr><tr><td>+" + Str + "</td><td>+" + Dex + "</td><td>+" + Con + "</td><td>+" + Int + "</td><td>+" + Wis + "</td><td>+" + Cha + "</td></tr><tr><td colspan='3'>Damage: " + Damage + "</td><td colspan='3'>Misc: " + Misc + "</td></tr></tbody></table>"
         $("#display").html(final)
     });
 });
@@ -129,5 +130,6 @@ document.getElementById('download-btn').addEventListener('click', function () {
 
         // Remove the link from the body
         document.body.removeChild(link);
+        $("#display").html(reset)
     });
 });
