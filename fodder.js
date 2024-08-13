@@ -96,3 +96,24 @@ $(document).ready(function() {
         console.log("Selected Text: " + selectedText);
     });
 });
+
+document.getElementById('download-btn').addEventListener('click', function() {
+    html2canvas(document.getElementById('input-table')).then(function(canvas) {
+        // Convert the canvas to a data URL
+        var imgData = canvas.toDataURL('image/png');
+        
+        // Create a link element
+        var link = document.createElement('a');
+        link.href = imgData;
+        link.download = 'table-image.png';
+        
+        // Append the link to the body
+        document.body.appendChild(link);
+        
+        // Simulate a click on the link to trigger the download
+        link.click();
+        
+        // Remove the link from the body
+        document.body.removeChild(link);
+    });
+});

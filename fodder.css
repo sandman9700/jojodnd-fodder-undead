@@ -228,6 +228,7 @@ input[type=number], textarea {
 #input-table > thead > tr > *, #input-table > tbody > tr > td  {
   border: 2px solid black !important;
   border-collapse: collapse;
+  background-color: mediumpurple;
 }
 
 textarea {
