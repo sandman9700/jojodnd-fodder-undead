@@ -14,8 +14,8 @@
     border-bottom: 1px solid purple;
   }
   
-  .center {
-    text-align: center;
+  .center, a.center {
+    text-align: center !important;
   }
   
   .minor {
@@ -237,4 +237,9 @@ textarea {
 
 .PBSelect {
   width: 75px;
+}
+
+iframe {
+  width: 100%;
+ height: 750px;
 }
