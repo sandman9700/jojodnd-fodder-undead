@@ -102,7 +102,7 @@ updateAC();
 $(document).ready(function () {
     $('#attributes').change(function () {
         var selectedValue = $(this).val();
-        vspec = $(this).find('option:selected').text();
+        spec = $(this).find('option:selected').text();
         console.log("Selected Value: " + selectedValue);
         console.log("Selected Text: " + spec);
     });
