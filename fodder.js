@@ -1,4 +1,6 @@
 var reset = "";
+var Hit = 12, HitDie = "d" + Hit, HP, AC;
+var spec = $('#attributes').find('option:selected').text();
 var Damage = "";
 $('#DMG').change(function () {
     Damage = $('#DMG').val();
@@ -24,7 +26,8 @@ $('.HitSelect').change(function () {
     updateHP();
 });
 
-var PB = 2;
+var PB = 2,
+    PRB = "+2";
 $('.PBSelect').change(function () {
     PB = parseInt($('.PBSelect').val());
     PRB = "+" + PB
@@ -74,7 +77,6 @@ $('#CHA').change(function () {
 
 function updateHP() {
     var HPBox = $('#HP'),
-        HP = "",
         Roll = Math.floor(Math.random() * Hit) + 1;
 
     HP = Hit + (Roll * PB) + (Con * PB)
@@ -87,8 +89,8 @@ updateHP();
 function updateAC() {
     var ACBox = $('#AC'),
         HACBox = $('#HAC'),
-        highestStat = Math.max(Dex, Con, Wis), // Get the highest of Dex, Con, or Wis
-        AC = 10 + PB + highestStat;
+        highestStat = Math.max(Dex, Con, Wis); // Get the highest of Dex, Con, or Wis
+        AC = 10 + PB + highestStat
     HAC = AC + PB;
 
     ACBox.html(AC);
@@ -100,20 +102,18 @@ updateAC();
 $(document).ready(function () {
     $('#attributes').change(function () {
         var selectedValue = $(this).val();
-        var spec = $(this).find('option:selected').text();
+        vspec = $(this).find('option:selected').text();
         console.log("Selected Value: " + selectedValue);
         console.log("Selected Text: " + spec);
     });
 });
-$(document).ready(function () {
-    $('#Export').click(function () {
-        var final = "<table id='tableCapture'><thead><tr><th colspan='5'>Name: " + Name + "</th><th>Hit Die: " + HitDie + "</th></tr></thead><tbody><tr><td colspan='2'>Specialization: " + spec + "</td><td>HP: " + HP + "</td><td>AC: " + AC + "</td><td>HAC: " + HAC + "</td><td>PB: " + PRB + "</td></tr><tr><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr><tr><td>+" + Str + "</td><td>+" + Dex + "</td><td>+" + Con + "</td><td>+" + Int + "</td><td>+" + Wis + "</td><td>+" + Cha + "</td></tr><tr><td colspan='3'>Damage: " + Damage + "</td><td colspan='3'>Misc: " + Misc + "</td></tr></tbody></table>"
-        $("#display").html(final)
-    });
+$('#Export').click(function () {
+    var final = "<table id='blankTable'><thead><tr><th colspan='5'>Name: " + Name + "</th><th>Hit Die: <b>" + HitDie + "</b></th></tr></thead><tbody><tr><td colspan='2'>Specialization | <b>" + spec + "</b></td><td>HP: <b>" + HP + "</b></td><td>AC: <b>" + AC + "</b></td><td>HAC: <b>" + HAC + "</b></td><td>PB: <b>" + PRB + "</b></td></tr><tr class='center'><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr><tr class='center'><td><b>+" + Str + "</b></td><td><b>+" + Dex + "</b></td><td><b>+" + Con + "</b></td><td><b>+" + Int + "</b></td><td><b>+" + Wis + "</b></td><td><b>+" + Cha + "</b></td></tr><tr><td colspan='3'>Damage: " + Damage + "</td><td colspan='3'>Misc: " + Misc + "</td></tr></tbody></table>"
+    $("#display").html(final)
 });
 
 document.getElementById('download-btn').addEventListener('click', function () {
-    html2canvas(document.getElementById('tableCapture')).then(function (canvas) {
+    html2canvas(document.getElementById('blankTable')).then(function (canvas) {
         // Convert the canvas to a data URL
         var imgData = canvas.toDataURL('image/png');
 
