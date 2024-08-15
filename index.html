@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="fodder.css">
   <script async src="fodder.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <title>sandman's Fodder Undead Editor</title>
+  <title>sandman's Fodder Undead System</title>
 </head>
 <!--Thanks to Kyler and Maggy for your feedback and for making the website and the module respectfully.-->
 
@@ -29,25 +29,164 @@
       </a>
     </div>
     <p style="color:mediumpurple;" class="display-heading h6 center" id="navTitle">
-      sandman's Fodder Undead Editor
+      sandman's Fodder Undead System
     </p>
   </nav>
-  <div ></div>
+  <div></div>
+
   <h1 class="display-title center" style="padding-top: 10px;">
-    sandman's Fodder Undead Editor
+    sandman's Fodder Undead System
   </h1>
   <div class="content">
+    <h1 class="display-title center" style="padding-top: 10px;">
+      sandman's Fodder Undead System
+    </h1>
+    <section>
+      <p>This system is for lesser undead. This is for big hack and slash slash encounters akin to something from the
+        Doom, Ultrakill, or Hades games. This is an alternative to making a full character sheet. This just gives the
+        essentials:</p>
+      <small>*Fodder Undead <b><u>CANNOT</u></b> be stand users</small>
+      <br>
+      <h5 class="display-heading">Essentials</h5>
+      <ul>
+        <li>PB</li>
+        <li>Health</li>
+        <li>AC</li>
+        <li>Damage</li>
+        <li>Ability Scores</li>
+        <li>Scaling</li>
+      </ul>
+    </section>
+    <section>
+      <h3 class="display-heading center">Proficiency Bonus (PB)</h3>
+      <p>The PB for a Fodder undead can range from +2 to +6. Undead with a lesser PB are an inexperienced undead, not
+        necessarily weaker. Undead with a greater PB have spent a longer time being an undead. PB is like levels for
+        undead. Ghoul Levels are equal to PB -1. Any ASIs are just +2 to modifiers.</p>
+    </section>
+    <section>
+      <h3 class="display-heading center">Health</h3>
+      <p>There are 5 archetypes for health</p>
+      <ul>
+        <li>Tank: d12 - For undead you want to last for a long time</li>
+        <li>Wall: d10 - For undead you want to last for a while</li>
+        <li>Durable: d8 - For undead you want to last for a bit</li>
+        <li>Normal: d6 - For undead you want to last</li>
+        <li>Frail: d4 - For undead you want gone</li>
+      </ul>
+      <p>The amount of hit die is equal to the undead’s PB. You can also double or even square it if needed. The
+        equation for HP is as follows: <span class="equation">Max Hit Dice Roll + (Hit Dice Roll per PB) + (Con *
+          PB)</span></p>
+    </section>
+    <section>
+      <h3 class="display-heading center">Armor Class (AC)</h3>
+      <p>AC for undead is equal to 10 + PB + (The highest between: Con OR Dex OR Wis). I recommend using Con if the
+        undead specializes in Strength or Constitution. Use Dex for if the undead specializes in Dexterity or Charisma.
+        Use Wis if the character specializes in Wisdom or Intelligence. Head AC is regular AC but with PB added once
+        more.</p>
+    </section>
+    <section>
+      <h3 class="display-heading center">Damage</h3>
+      <p>Damage can be done through Weapons, but most of the time, they use their fists and nothing else.</p>
+      <ul>
+        <li>Powerful: d12</li>
+        <li>Brusier: d10</li>
+        <li>Intermediate: d8</li>
+        <li>Weakling: d6</li>
+      </ul>
+      <p>Generally the higher the attack die is the lesser number of attacks. Number of attacks is equal to PB.if PB is
+        4 or above attack dice double and go down a tier (1d12 => 2d10, 1d10 => 2d8, etc.) with the exception of 1d6
+        which turns into 2d6.</p>
+    </section>
+    <section>
+      <h3 class="display-heading center">Ability Scores</h3>
+      <p>Saving the most complex for last. There are 15 archetypes for ability scores, each one specializing in 2
+        scores. The specialized scores have a +4 in one and +3 in the other while the others are <span
+          class="equation">+2/+1/0/-1</span>. You are proficient in specialized scores.</p>
+      <ol>
+        <li><b>Guts</b>: Strength and Constitution</li>
+        <li><b>Force</b>: Strength and Dexterity</li>
+        <li><b>Strategy</b>: Strength and Intelligence</li>
+        <li><b>Resolve</b>: Strength and Wisdom</li>
+        <li><b>Dominance</b>: Strength and Charisma</li>
+        <li><b>Agility</b>: Dexterity and Constitution</li>
+        <li><b>Precision</b>: Dexterity and Intelligence</li>
+        <li><b>Reflex</b>: Dexterity and Wisdom</li>
+        <li><b>Grace</b>: Dexterity and Charisma</li>
+        <li><b>Fortitude</b>: Constitution and Intelligence</li>
+        <li><b>Conviction</b>: Constitution and Wisdom</li>
+        <li><b>Vitality</b>: Constitution and Charisma</li>
+        <li><b>Insight</b>: Intelligence and Wisdom</li>
+        <li><b>Cunning</b>: Intelligence and Charisma</li>
+        <li><b>Composure</b>: Wisdom and Charisma</li>
+      </ol>
+      <p>The Specializations of Ability scores is what provides the most variety in the fodder. I wouldn't recommend
+        having more than 2 of each in each encounter unless you are using ridiculous amounts of fodder.</p>
+    </section>
+    <section>
+      <h3 class="display-heading center">Scaling</h3>
+      <p>Scaling is an important part of building encounters with fodder undead. The main factor in scaling with this
+        system is the PB and Amount. I wouldn't recommend more than 20 fodder undead in one encounter. PB is equal to
+        player level for scaling. Meaning to have the two sides equal is the following Equation:</p>
+      <h4 class="equation">(PB * # of fodder undead) - other levels = Total Party Levels</h4>
+    </section>
+    <section id="last">
+      <h2 class="display-heading center">Blank Fodder Undead Stat Block</h2>
+      <div>
+      <table class="blankTable">
+        <thead>
+          <tr>
+            <th colspan="5">Name:</th>
+            <th>Hit Die:<span class="invis">jkjkjk</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2">Specialization: <span class="invis">jkjkjkjkjkjkjkjkjkjkjkjk</span></td>
+            <td>HP:<span class="invis">jkjkjk</span></td>
+            <td>AC:<span class="invis">jkjkjk</span></td>
+            <td>HAC:<span class="invis">jkjkjk</span></td>
+            <td>PB:</td>
+          </tr>
+          <tr>
+            <td>STR</td>
+            <td>DEX</td>
+            <td>CON</td>
+            <td>INT</td>
+            <td>WIS</td>
+            <td>CHA</td>
+          </tr>
+          <tr>
+            <td><span class="invis">D</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3">Damage:</td>
+            <td colspan="3">Misc:</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </section>
+  </div>
+  <div class="content">
+    <h1 class="display-title center" style="padding-top: 10px;">
+      Fodder Undead Editor
+    </h1>
     <table id="input-table">
       <thead>
         <tr>
           <th colspan="5">Name:<textarea id="NAME"></textarea></th>
           <td>Hit Die:<select class="form-select bg-warning HitSelect" aria-label="Default select example">
-            <option value="12">d12</option>
-            <option value="10">d10</option>
-            <option value="8">d8</option>
-            <option value="6">d6</option>
-            <option value="4">d4</option>
-          </select></td>
+              <option value="12">d12</option>
+              <option value="10">d10</option>
+              <option value="8">d8</option>
+              <option value="6">d6</option>
+              <option value="4">d4</option>
+            </select></td>
         </tr>
       </thead>
       <tbody>
@@ -89,7 +228,7 @@
         </tr>
         <tr class="center">
           <td colspan="2"><input type="number" id="STR" /></td>
-          <td colspan="2"><input type="number" id="DEX"/></td>
+          <td colspan="2"><input type="number" id="DEX" /></td>
           <td colspan="2"><input type="number" id="CON" /></td>
         </tr>
         <tr class="center">
@@ -98,9 +237,9 @@
           <td colspan="2">CHA</td>
         </tr>
         <tr class="center">
-          <td colspan="2"><input type="number" id="INT"/></td>
-          <td colspan="2"><input type="number" id="WIS"/></td>
-          <td colspan="2"><input type="number" id="CHA"/></td>
+          <td colspan="2"><input type="number" id="INT" /></td>
+          <td colspan="2"><input type="number" id="WIS" /></td>
+          <td colspan="2"><input type="number" id="CHA" /></td>
         </tr>
         <tr>
           <td colspan="3">Damage: <textarea id="DMG"></textarea></td>
@@ -108,18 +247,15 @@
         </tr>
       </tbody>
     </table>
-    <p>The specialized scores have a +4 in one and +3 in the other while the others are +2/+1/0/-1. You are proficient in specialized scores.</p>
-    
+    <p>The specialized scores have a +4 in one and +3 in the other while the others are +2/+1/0/-1. You are proficient
+      in specialized scores.</p>
+
     <button class="btn btn-warning" id="Export">Export</button>
-    <br/><br/>
+    <br /><br />
     <div id="display"></div>
-    <br/><br/>
+    <br /><br />
     <button class="btn btn-warning" id="download-btn">Download (After Export)</button>
     <div id="display"></div>
-  </div>
-  <div class="content">
-    <h2 class=" h2 display-heading center">Document</h2>
-   <iframe src="https://docs.google.com/document/d/1OzvV4UNgvLShAWolMA_Lv3S2p2VcctgUeZBsWYJKoK8/edit#heading=h.dv10tp6osffo"></iframe>
   </div>
 </body>
 

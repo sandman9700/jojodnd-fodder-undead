@@ -244,9 +244,34 @@ iframe {
  height: 750px;
 }
 
-table#blankTable > * > * > * {
+table.blankTable > * > * > * {
   border: 2px solid black;
   border-collapse: collapse;
   background-color: white;
   color:black
+}
+
+table#input-table {
+  overflow-x: scroll;
+  max-width: 100%;
+}
+
+section {
+  border-bottom: 2px dashed purple;
+  margin: 10px;
+}
+
+section#last {
+  border-bottom: none;
+}
+
+.equation {
+  color: rgb(221, 44, 80);
+  font-size: 105%;
+  background-color: rgb(222,222,222,0.3);
+}
+
+.invis {
+  color: white;
+  font-size: 15px;
 }
