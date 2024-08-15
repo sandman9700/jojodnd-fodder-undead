@@ -1,2 +1,2 @@
-# fodder-undead-editor
-an editor for sandman's fodder undead system
+# sandman's Fodder Undead System
+Website for my system of fodder undead in jojo dnd
