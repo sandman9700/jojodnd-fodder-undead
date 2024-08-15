@@ -275,3 +275,9 @@ section#last {
   color: white;
   font-size: 15px;
 }
+
+img[src="statblock.webp"] {
+  border-radius: 20px;
+  max-width: 100%;
+  max-height: inherit;  
+}
