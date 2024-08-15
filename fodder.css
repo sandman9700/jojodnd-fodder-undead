@@ -267,7 +267,7 @@ section#last {
 
 .equation {
   color: rgb(221, 44, 80);
-  font-size: 105%;
+
   background-color: rgb(222,222,222,0.3);
 }
 
@@ -279,5 +279,5 @@ section#last {
 img[src="statblock.webp"] {
   border-radius: 20px;
   max-width: 100%;
-  max-height: inherit;  
+  max-height: inherit;
 }
