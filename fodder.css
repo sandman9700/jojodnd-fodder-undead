@@ -281,3 +281,7 @@ img[src="statblock.webp"] {
   max-width: 100%;
   max-height: inherit;
 }
+
+#finalize {
+  display: none;
+}
