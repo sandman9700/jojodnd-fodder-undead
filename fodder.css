@@ -276,8 +276,8 @@ section#last {
   font-size: 15px;
 }
 
-img[src="statblock.webp"] {
-  border-radius: 20px;
+img[src="blank.webp"] {
+  border-radius: 10px;
   max-width: 100%;
   max-height: inherit;
 }

@@ -1,5 +1,5 @@
 var reset = "";
-var Hit = 12, HitDie = "d" + Hit, HP, AC;
+var Hit = 12, HitDie = "d" + Hit, HP, HeadHP, AC;
 var spec = $('#attributes').find('option:selected').text();
 var Damage = "";
 $('#DMG').change(function () {
@@ -77,11 +77,13 @@ $('#CHA').change(function () {
 
 function updateHP() {
     var HPBox = $('#HP'),
+        HeadBox = $('#Head')
         Roll = Math.floor(Math.random() * Hit) + 1;
 
     HP = Hit + (Roll * PB) + (Con * PB)
-
+    HeadHP = HP + PB
     HPBox.html(HP);
+    HeadBox.html(HeadHP);
     console.log("PB:", PB, "Hit:", Hit, "Roll:", Roll, "Con:", Con, "HP:", HP);
 }
 updateHP();
@@ -108,7 +110,7 @@ $(document).ready(function () {
     });
 });
 $('#Export').click(function () {
-    var final = "<table class='blankTable' id='blankTable'><thead><tr><th colspan='5'>Name: " + Name + "</th><th>Hit Die: <b>" + HitDie + "</b></th></tr></thead><tbody><tr><td colspan='2'>Specialization | <b>" + spec + "</b></td><td>HP: <b>" + HP + "</b></td><td>AC: <b>" + AC + "</b></td><td>HAC: <b>" + HAC + "</b></td><td>PB: <b>" + PRB + "</b></td></tr><tr class='center'><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr><tr class='center'><td><b>+" + Str + "</b></td><td><b>+" + Dex + "</b></td><td><b>+" + Con + "</b></td><td><b>+" + Int + "</b></td><td><b>+" + Wis + "</b></td><td><b>+" + Cha + "</b></td></tr><tr><td colspan='3'>Damage: " + Damage + "</td><td colspan='3'>Misc: " + Misc + "</td></tr></tbody></table>"
+    var final = "<table class='blankTable' id='blankTable'><thead><tr><th colspan='5'>Name: " + Name + "</th><th>Hit Die: <b>" + HitDie + "</b></th></tr></thead><tbody><tr><td colspan='2'>Specialization | <b>" + spec + "</b></td><td>HP: <b>" + HP + "</b></td><td>AC: <b>" + AC + "</b></td><td>HAC: <b>" + HAC + "</b></td><td>PB: <b>" + PRB + "</b></td></tr><tr class='center'><td>STR</td><td>DEX</td><td>CON</td><td>INT</td><td>WIS</td><td>CHA</td></tr><tr class='center'><td><b>+" + Str + "</b></td><td><b>+" + Dex + "</b></td><td><b>+" + Con + "</b></td><td><b>+" + Int + "</b></td><td><b>+" + Wis + "</b></td><td><b>+" + Cha + "</b></td></tr><tr><td colspan='3'>Damage: " + Damage + "</td><td colspan='2'>Misc: " + Misc + "</td><td>Head HP: <b>" + HeadHP + "</b></tr></tbody></table>"
     $("#display").html(final);
     $("#finalize").show();
 });
